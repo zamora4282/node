@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/zamora4282/node/issues"
   },
-  "homepage": "https://github.com/zamora4282/node#readme"
+  "homepage": "https://github.com/zamora4282/node#readme",
+  "dependencies": {
+    "yargs": "^13.2.4"
+  }
 }
