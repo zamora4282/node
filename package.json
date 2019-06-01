@@ -18,5 +18,8 @@
   "homepage": "https://github.com/zamora4282/node#readme",
   "dependencies": {
     "yargs": "^13.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
