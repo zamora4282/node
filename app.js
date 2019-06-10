@@ -12,10 +12,26 @@ const argv = require ('yargs')
                     .help()
                     .argv;
 
-const { crearArchivo } = require('./multiplicar/multiplicar');
+const { crearArchivo, listarTabla } = require('./multiplicar/multiplicar');
 
-let base = 7;
-console.log('limite',argv.limite);
+let comando = argv._[0];
+
+switch (comando) {
+    case 'listar':
+        
+        listarTabla(argv.base, argv.limite);
+        
+        break;
+    case 'crear':
+        console.log('crear');
+        crearArchivo(argv.base)
+            .then(archivo => console.log(`Archivo creado ${ archivo }`))
+            .catch(e => console.log(e));
+        break;
+    default:
+        console.log('No existe este comando');
+        break;
+}
 
 
 // let parametros = arv.split('=');
